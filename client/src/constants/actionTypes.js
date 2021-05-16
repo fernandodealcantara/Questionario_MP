@@ -1,3 +1,5 @@
+/* URL */
+export const URL = "URL";
 /* LOGIN */
 export const AUTH = "AUTH";
 export const LOGOUT = "LOGOUT";
