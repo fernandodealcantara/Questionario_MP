@@ -39,7 +39,7 @@ export default function QuizCard({ quiz }) {
   const csvURL = window.URL.createObjectURL(dataToDownload);
   const downloadlink = document.createElement("a");
   downloadlink.href = csvURL;
-  downloadlink.setAttribute("download", "responses.csv");
+  downloadlink.setAttribute("download", "respostas.csv");
 
   useEffect(() => {
     let res;
@@ -118,7 +118,7 @@ export default function QuizCard({ quiz }) {
                 size="small"
                 color="primary"
                 onClick={() => {
-                  copy(`http://localhost:3000/quiz/reply/${quiz._id}`);
+                  copy(`${process.env.REACT_APP_SITE_URL}/${quiz._id}`);
                   addToast("LINK COPIADO.", {
                     appearance: "info",
                     autoDismiss: true,
